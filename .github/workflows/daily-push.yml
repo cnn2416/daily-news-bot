@@ -1,0 +1,129 @@
+name: 每日科技日报推送
+
+on:
+  schedule:
+    # 每天北京时间 8:00 (对应 UTC 0:00)
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  push-daily-news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v4
+    
+    - name: 设置 Python 环境
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: 安装依赖
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install feedparser requests beautifulsoup4 lxml
+        
+    - name: 创建必要的目录
+      run: |
+        mkdir -p data logs config backup
+        echo "Created required directories"
+    
+    - name: 复制配置文件
+      run: |
+        if [ -f config/config.example.yaml ]; then
+          cp config/config.example.yaml config/config.yaml
+          echo "Copied config file"
+        else
+          echo "Config example not found, creating empty config"
+          mkdir -p config
+          echo "# ServerChan config" > config/config.yaml
+          echo "push:" >> config/config.yaml
+          echo "  serverchan:" >> config/config.yaml
+          echo "    enabled: true" >> config/config.yaml
+          echo "    sckey: \${{ secrets.SERVERCHAN_SENDKEY }}" >> config/config.yaml
+        fi
+        
+    - name: 运行每日新闻机器人
+      env:
+        SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        echo "🚀 开始运行每日新闻机器人..."
+        echo "时间: $(date '+%Y-%m-%d %H:%M:%S')"
+        echo "Python版本: $(python --version)"
+        echo "工作目录: $(pwd)"
+        echo "目录结构:"
+        ls -la
+        echo "src目录内容:"
+        ls -la src/
+        echo "=========================================="
+        
+        # 确保Python可以找到本地模块
+        export PYTHONPATH=$PYTHONPATH:$(pwd)/src
+        
+        # 运行主程序（测试模式）
+        echo "运行测试模式..."
+        python -c "import sys; sys.path.insert(0, 'src'); print('导入模块测试...'); import scraper; print('✅ scraper导入成功'); from serverchan_sender import ServerChan; print('✅ serverchan_sender导入成功'); print('所有模块导入成功！')"
+        
+        echo "=========================================="
+        echo "开始运行新闻机器人..."
+        
+        # 运行主程序
+        python daily_tech_news_bot.py --test
+        
+        # 检查运行结果
+        if [ $? -eq 0 ]; then
+          echo "✅ 新闻机器人运行成功"
+        else
+          echo "❌ 新闻机器人运行失败"
+          # 尝试直接运行Python调试
+          echo "尝试调试模式..."
+          python -c "
+import sys
+sys.path.insert(0, 'src')
+try:
+    import scraper
+    print('✅ scraper导入成功')
+    from serverchan_sender import ServerChan
+    print('✅ serverchan_sender导入成功')
+    
+    # 尝试运行主要功能
+    from scraper import NewsScraper
+    scraper = NewsScraper()
+    news_data = scraper.run()
+    print(f'✅ 抓取到 {len(news_data) if news_data else 0} 条新闻')
+except Exception as e:
+    print(f'❌ 错误: {e}')
+    import traceback
+    traceback.print_exc()
+"
+          exit 1
+        fi
+        
+    - name: 上传生成的数据文件
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: news-data-${{ github.run_id }}
+        path: |
+          data/
+          logs/
+        retention-days: 7
+    
+    - name: 显示运行日志
+      if: always()
+      run: |
+        echo "📊 工作流运行完成"
+        echo "========================"
+        echo "运行时间: $(date '+%Y-%m-%d %H:%M:%S')"
+        echo "运行ID: ${{ github.run_id }}"
+        echo "触发者: ${{ github.actor }}"
+        echo "工作流URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        echo ""
+        echo "📁 生成的文件:"
+        ls -la data/ 2>/dev/null || echo "data目录为空"
+        ls -la logs/ 2>/dev/null || echo "logs目录为空"

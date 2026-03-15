@@ -1,0 +1,241 @@
+# 每日新闻机器人配置文件示例
+# 将此文件复制为 config.yaml 并填写您的配置
+
+# 推送配置
+push:
+  # Server酱推送配置 (微信推送)
+  serverchan:
+    enabled: true
+    sckey: "SCU1234567890abcdefg"  # 替换为您的Server酱SCKEY
+    title: "📰 每日新闻简报"         # 推送标题
+    # 可选：消息模板
+    template: |
+      {title}
+      
+      {content}
+      
+      ⏰ {time}
+      📱 由每日新闻机器人生成
+      
+  # Telegram推送配置
+  telegram:
+    enabled: false
+    bot_token: "1234567890:ABCDEFGHIJKLMNOPQRSTUVWXYZ"  # Bot Token
+    chat_id: "-1001234567890"                          # Chat ID (可以是频道或群组)
+    parse_mode: "Markdown"                             # 可选: Markdown, HTML
+    disable_web_page_preview: true                     # 禁用网页预览
+    
+  # 企业微信推送配置
+  wecom:
+    enabled: false
+    webhook: "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=abcdefg"
+    msgtype: "markdown"                               # 可选: text, markdown
+    
+  # 推送优先级 (如果多个推送启用，按优先级顺序执行)
+  priority:
+    - serverchan
+    - telegram
+    - wecom
+
+# 抓取配置
+scraping:
+  # 每个分类的最大新闻数量
+  max_per_category:
+    elon_musk: 15          # 马斯克专栏
+    donald_trump: 15       # 特朗普专栏
+    ai_tech: 12            # AI科技
+    us_politics: 10        # 美国政治
+    international: 12      # 国际热点
+    tech_business: 10      # 科技商业
+    chinese_tech: 10       # 中国科技
+    financial: 8           # 财经金融
+    defense: 8             # 国防军事
+    energy_space: 8        # 能源太空
+  
+  # 网络请求配置
+  network:
+    timeout: 30            # 请求超时时间(秒)
+    retry_times: 3         # 重试次数
+    delay_between_requests: 1.0  # 请求间延迟(秒)
+    max_concurrent: 5      # 最大并发请求数
+    
+  # 新闻源配置
+  sources:
+    # 如果某个分类抓取失败，尝试其他分类
+    fallback_enabled: true
+    # 最少需要成功的新闻源数量
+    min_successful_sources: 3
+
+# 翻译配置
+translation:
+  # 简单翻译模式 (内置关键词翻译)
+  simple:
+    enabled: true
+    # 自定义翻译词汇 (英文: 中文)
+    custom_dict:
+      ai: "人工智能"
+      tesla: "特斯拉"
+      spacex: "太空探索技术公司"
+      trump: "特朗普"
+      musk: "马斯克"
+      china: "中国"
+      usa: "美国"
+      
+  # 高级翻译API (需要API密钥)
+  api:
+    enabled: false
+    provider: "google"    # 可选: google, baidu, deepl, openai
+    api_key: "your-api-key"
+    api_secret: "your-api-secret"  # 如果需要的话
+    target_language: "zh-CN"       # 目标语言
+
+# 过滤配置
+filters:
+  # 标题过滤
+  title:
+    min_length: 10
+    max_length: 200
+    blacklist_keywords:
+      - "spam"
+      - "advertisement"
+      - "click here"
+      - "subscribe now"
+      
+  # 来源过滤
+  sources:
+    whitelist_domains: []   # 白名单域名列表
+    blacklist_domains:      # 黑名单域名列表
+      - "spam-site.com"
+      - "advertisement.com"
+      
+  # 内容过滤
+  content:
+    min_word_count: 20
+    max_word_count: 1000
+
+# 性能优化
+performance:
+  # 缓存配置
+  cache:
+    enabled: true
+    ttl_hours: 24           # 缓存有效期(小时)
+    max_cached_items: 1000  # 最大缓存项目数
+    
+  # 并行处理
+  parallel:
+    enabled: true
+    max_workers: 8          # 最大工作线程数
+    batch_size: 5           # 批量处理大小
+    
+  # 内存限制
+  memory:
+    max_mb: 512             # 最大内存使用(MB)
+
+# 日志配置
+logging:
+  level: "INFO"             # 可选: DEBUG, INFO, WARNING, ERROR
+  file:
+    enabled: true
+    path: "logs/daily_news_bot.log"
+    max_size_mb: 10         # 日志文件最大大小(MB)
+    backup_count: 5         # 备份文件数量
+    
+  console:
+    enabled: true
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    
+  # 错误日志单独存储
+  error_log:
+    enabled: true
+    path: "logs/error.log"
+
+# 数据管理
+data_management:
+  # 自动保存配置
+  auto_save:
+    enabled: true
+    formats:
+      - json
+      - markdown
+    directory: "data/"
+    
+  # 自动清理
+  cleanup:
+    enabled: true
+    keep_days: 7            # 保留天数
+    auto_clean: true        # 自动清理
+    
+  # 备份配置
+  backup:
+    enabled: true
+    backup_dir: "backup/"
+    max_backups: 10         # 最大备份数量
+
+# 通知配置
+notifications:
+  # 成功通知
+  success:
+    enabled: false
+    # 可以通过webhook、email等方式通知
+    
+  # 失败通知
+  failure:
+    enabled: false
+    max_retries: 3          # 失败重试次数
+    
+  # 警告通知
+  warning:
+    enabled: false
+
+# 测试模式
+test_mode:
+  enabled: false            # 开启测试模式
+  options:
+    max_news_items: 20      # 测试模式下最大新闻数量
+    no_push: true           # 测试模式下不推送
+    verbose: true           # 详细输出
+
+# 自定义新闻源 (可选)
+custom_sources:
+  # 自定义分类
+  my_category:
+    name: "我的自定义分类"
+    description: "自定义的新闻分类"
+    sources:
+      - url: "https://example.com/rss"
+        name: "Example RSS"
+        weight: 1.0        # 权重(用于排序)
+        
+  # 自定义关键词过滤
+  my_keywords:
+    - "keyword1"
+    - "keyword2"
+    - "keyword3"
+
+# 计划任务
+schedule:
+  # 运行时间 (Cron表达式)
+  cron: "0 0 * * *"        # 每天UTC时间0点(北京时间8点)
+  
+  # 时区
+  timezone: "Asia/Shanghai"
+  
+  # 节假日跳过
+  skip_holidays: false
+  holiday_regions:
+    - "CN"                  # 中国节假日
+    - "US"                  # 美国节假日
+
+# 更新检查
+update_check:
+  enabled: true
+  check_interval_days: 7    # 检查更新间隔(天)
+  auto_update: false        # 自动更新
+  
+# 调试配置
+debug:
+  enabled: false
+  options:
+    show_raw_data: false
+    log_http_requests: false
+    trace_exceptions: true

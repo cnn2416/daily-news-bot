@@ -1,0 +1,273 @@
+{
+  "ai": [
+    {
+      "title": "Staff complain that xAI is flailing because of constant upheaval",
+      "url": "https://arstechnica.com/ai/2026/03/staff-complain-that-xai-is-flailing-because-of-constant-upheaval/",
+      "source": "Ars Technica",
+      "priority": true,
+      "priority_type": "musk"
+    },
+    {
+      "title": "🔥 lightpanda-io/browser",
+      "url": "https://github.com/lightpanda-io/browser",
+      "source": "GitHub Trending",
+      "description": "Lightpanda: the headless browser designed for AI and automation"
+    },
+    {
+      "title": "🔥 Crosstalk-Solutions/project-nomad",
+      "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+      "source": "GitHub Trending",
+      "description": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere."
+    },
+    {
+      "title": "🔥 volcengine/OpenViking",
+      "url": "https://github.com/volcengine/OpenViking",
+      "source": "GitHub Trending",
+      "description": "OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system paradigm, enabling hierarchical context delivery and self-evolving."
+    },
+    {
+      "title": "🔥 shareAI-lab/learn-claude-code",
+      "url": "https://github.com/shareAI-lab/learn-claude-code",
+      "source": "GitHub Trending",
+      "description": "Bash is all you need - A nano Claude Code–like agent, built from 0 to 1"
+    },
+    {
+      "title": "🔥 shanraisshan/claude-code-best-practice",
+      "url": "https://github.com/shanraisshan/claude-code-best-practice",
+      "source": "GitHub Trending",
+      "description": "practice made claude perfect"
+    },
+    {
+      "title": "A Visual Introduction to Machine Learning",
+      "url": "https://r2d3.us/visual-intro-to-machine-learning-part-1/",
+      "source": "Hacker News"
+    },
+    {
+      "title": "The Appalling Stupidity of Spotify's AI DJ",
+      "url": "https://www.charlespetzold.com/blog/2026/02/The-Appalling-Stupidity-of-Spotifys-AI-DJ.html",
+      "source": "Hacker News",
+      "tag": "AI"
+    },
+    {
+      "title": "$96 3D-printed rocket that recalculates its mid-air trajectory using a $5 sensor",
+      "url": "https://github.com/novatic14/MANPADS-System-Launcher-and-Rocket",
+      "source": "Hacker News",
+      "tag": "AI"
+    },
+    {
+      "title": "Rack-mount hydroponics",
+      "url": "https://sa.lj.am/rack-mount-hydroponics/",
+      "source": "Hacker News"
+    },
+    {
+      "title": "Why Mathematica does not simplify sinh(arccosh(x))",
+      "url": "https://www.johndcook.com/blog/2026/03/10/sinh-arccosh/",
+      "source": "Hacker News"
+    },
+    {
+      "title": "Treasure hunter freed from jail after refusing to turn over shipwreck gold",
+      "url": "https://www.bbc.com/news/articles/cg4g7kn99q3o",
+      "source": "Hacker News",
+      "tag": "AI"
+    },
+    {
+      "title": "NASA officials sidestepped questions on Artemis II risks—there's a reason why",
+      "url": "https://arstechnica.com/space/2026/03/flying-to-the-moon-for-the-first-time-in-54-years-is-risky-but-how-risky/",
+      "source": "Ars Technica"
+    },
+    {
+      "title": "Woman sneezes out maggots after fly larvae get trapped in her deviated septum",
+      "url": "https://arstechnica.com/health/2026/03/woman-sneezes-out-maggots-after-fly-larvae-get-trapped-in-her-deviated-septum/",
+      "source": "Ars Technica"
+    },
+    {
+      "title": "Slay the Spire 2 is a bit too familiar for its own good",
+      "url": "https://arstechnica.com/gaming/2026/03/slay-the-spire-2-is-a-bit-too-familiar-for-its-own-good/",
+      "source": "Ars Technica"
+    },
+    {
+      "title": "Games with loot boxes to get minimum 16 age rating across Europe",
+      "url": "https://www.bbc.com/news/articles/cge84xqjg5lo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Tech"
+    },
+    {
+      "title": "AI toys for children misread emotions and respond inappropriately, researchers warn",
+      "url": "https://www.bbc.com/news/articles/clyg4wx6nxgo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Tech"
+    },
+    {
+      "title": "Grammarly pulls AI author-impersonation tool after backlash",
+      "url": "https://www.bbc.com/news/articles/cx28v08jpe7o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Tech"
+    },
+    {
+      "title": "Lloyds, Bank of Scotland and Halifax apps showed customers other users' transactions",
+      "url": "https://www.bbc.com/news/articles/c4g23npxpwgo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Tech"
+    },
+    {
+      "title": "小鼠实验显示在类似火星的重力条件下肌肉会流失",
+      "url": "https://www.solidot.org/story?sid=83768",
+      "source": "Solidot"
+    },
+    {
+      "title": "Meta 将移除 Instagram 私信的端对端加密功能",
+      "url": "https://www.solidot.org/story?sid=83767",
+      "source": "Solidot"
+    },
+    {
+      "title": "Digg 重启失败",
+      "url": "https://www.solidot.org/story?sid=83766",
+      "source": "Solidot"
+    }
+  ],
+  "ecommerce": [],
+  "startup": [
+    {
+      "title": "ElevenCreative by ElevenLabs",
+      "url": "https://www.producthunt.com/products/elevencreative-by-elevenlabs",
+      "source": "Product Hunt"
+    },
+    {
+      "title": "Google Workspace CLI",
+      "url": "https://www.producthunt.com/products/github-google-workspace-cli",
+      "source": "Product Hunt"
+    },
+    {
+      "title": "Mooon",
+      "url": "https://www.producthunt.com/products/mooon",
+      "source": "Product Hunt"
+    },
+    {
+      "title": "Cal.com Agents",
+      "url": "https://www.producthunt.com/products/cal",
+      "source": "Product Hunt"
+    },
+    {
+      "title": "工业级AI视频厂商再融资，掌握120TB独家数据，营收破亿 | 硬氪首发",
+      "url": "https://36kr.com/p/3723669408987782?f=rss",
+      "source": "36氪"
+    },
+    {
+      "title": "AWE首秀亮王牌：慕思，凭什么让一众科技大佬集体“躺平”？",
+      "url": "https://36kr.com/p/3722669939931524?f=rss",
+      "source": "36氪"
+    },
+    {
+      "title": "中国最大家电展上，一批想帮你做家务的机器人来了！",
+      "url": "https://36kr.com/p/3722882943334789?f=rss",
+      "source": "36氪"
+    }
+  ],
+  "energy": [],
+  "military": [
+    {
+      "title": "BBC visits aftermath of Israeli strike on Lebanon that killed family as IDF targets Hezbollah",
+      "url": "https://www.bbc.com/news/articles/c20lvn0ex6yo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World"
+    },
+    {
+      "title": "US names six crew killed in refuelling plane crash in Iraq",
+      "url": "https://www.bbc.com/news/articles/cly0d510yz3o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World"
+    },
+    {
+      "title": "Severe flooding kills 62 in Kenya, as heavy rains continue",
+      "url": "https://www.bbc.com/news/articles/cz6e5eng03yo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World"
+    }
+  ],
+  "international": [
+    {
+      "title": "I bought a $2,000 electric ATV from China. Here’s what showed up",
+      "url": "https://electrek.co/2026/03/15/i-bought-a-2000-electric-atv-from-china-heres-what-showed-up/",
+      "source": "Electrek",
+      "priority": true,
+      "priority_type": "musk"
+    },
+    {
+      "title": "Here are the best electric bikes you can buy at every price level in March 2026",
+      "url": "https://electrek.co/2026/03/14/here-are-the-best-electric-bikes-you-can-buy-at-every-price-level/",
+      "source": "Electrek",
+      "priority": true,
+      "priority_type": "musk"
+    },
+    {
+      "title": "Humanoid robots get to work at German BMW factory [video]",
+      "url": "https://electrek.co/2026/03/14/humanoid-robots-get-to-work-at-german-bmw-factory-video/",
+      "source": "Electrek",
+      "priority": true,
+      "priority_type": "musk"
+    },
+    {
+      "title": "Pittsburg State University just got a MASSIVE gift: an electric semi truck",
+      "url": "https://electrek.co/2026/03/14/pittsburg-state-university-just-got-a-massive-gift-an-electric-semi-truck/",
+      "source": "Electrek",
+      "priority": true,
+      "priority_type": "musk"
+    },
+    {
+      "title": "What is Digital Optimus? The new Tesla and xAI project explained",
+      "url": "https://www.teslarati.com/tesla-xai-digital-optimus-explained/",
+      "source": "Teslarati",
+      "priority": true,
+      "priority_type": "musk"
+    },
+    {
+      "title": "Tesla adds awesome new driving feature to Model Y",
+      "url": "https://www.teslarati.com/tesla-adds-awesome-new-driving-feature-model-y/",
+      "source": "Teslarati",
+      "priority": true,
+      "priority_type": "musk"
+    },
+    {
+      "title": "Tesla finally brings a Robotaxi update that Android users will love",
+      "url": "https://www.teslarati.com/tesla-finally-brings-robotaxi-update-android-users-will-love/",
+      "source": "Teslarati",
+      "priority": true,
+      "priority_type": "musk"
+    },
+    {
+      "title": "Lucid unveils Lunar Robotaxi in bid to challenge Tesla’s Cybercab in the autonomous ride hailing race",
+      "url": "https://www.teslarati.com/lucid-lunar-robotaxi-concept-vs-tesla-cybercab-ridehailing/",
+      "source": "Teslarati",
+      "priority": true,
+      "priority_type": "musk"
+    },
+    {
+      "title": "Restaurants revive retro pricing for anniversaries — but does the trend make ‘cents’?",
+      "url": "https://www.foxnews.com/food-drink/retro-pricing-restaurants-does-trend-make-cents",
+      "source": "Fox News"
+    },
+    {
+      "title": "Former college volleyball star Kaylie Ray opens up on viral clash with Arizona Democrat senator",
+      "url": "https://www.foxnews.com/sports/kaylie-ray-arizona-senator-womens-sports-hearing",
+      "source": "Fox News"
+    },
+    {
+      "title": "11-year-old accused of premeditated murder in brother’s death can’t be tried as adult, former DA says",
+      "url": "https://www.foxnews.com/us/11-year-old-accused-premeditated-murder-brothers-death-cant-tried-adult-former-da-says",
+      "source": "Fox News"
+    },
+    {
+      "title": "American Culture Quiz: Test yourself on tipping turmoil and burger buzz",
+      "url": "https://www.foxnews.com/lifestyle/american-culture-quiz-test-yourself-tipping-turmoil-burger-buzz",
+      "source": "Fox News"
+    },
+    {
+      "title": "Wall Street Banks Prepare to Sell Billions of Dollars of X Loans",
+      "url": "https://www.wsj.com/articles/wall-street-banks-prepare-to-sell-billions-of-dollars-of-x-loans-c609beb1?mod=pls_whats_news_us_business_f",
+      "source": "WSJ"
+    },
+    {
+      "title": "Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service",
+      "url": "https://www.wsj.com/articles/canada-to-provide-720-million-to-canada-post-to-avoid-insolvency-at-mail-service-fc09a6b9?mod=pls_whats_news_us_business_f",
+      "source": "WSJ"
+    },
+    {
+      "title": "Amazon Willing to Discuss Quebec Shutdown With Canadian Officials",
+      "url": "https://www.wsj.com/articles/amazon-willing-to-discuss-quebec-shutdown-with-canadian-officials-610e5f59?mod=pls_whats_news_us_business_f",
+      "source": "WSJ"
+    }
+  ]
+}
